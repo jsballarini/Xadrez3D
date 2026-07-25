@@ -1,0 +1,22 @@
+{
+  "name": "xadrez3d",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Xadrez 3D online — singleplayer, multiplayer, chat, voz e webcam",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "dev:client": "npm run dev -w @xadrez3d/client",
+    "dev:server": "npm run dev -w @xadrez3d/server",
+    "build": "npm run build -w @xadrez3d/shared && npm run build -w @xadrez3d/server && npm run build -w @xadrez3d/client",
+    "test": "npm run test --workspaces --if-present",
+    "start": "npm run start -w @xadrez3d/server"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
